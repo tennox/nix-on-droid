@@ -87,8 +87,8 @@ in
       prootStatic =
         let
           crossCompiledPaths = {
-            aarch64-linux = "/nix/store/0j4mn37pca6v8a1d23q7yzkxli8p4y77-proot-termux-static-aarch64-unknown-linux-android-0-unstable-2026-02-21";
-            x86_64-linux = "/nix/store/lk9xziij9fnrfj1nsz3p6c9zcwixvzql-proot-termux-static-x86_64-unknown-linux-android-0-unstable-2026-02-21";
+            aarch64-linux = "/nix/store/3mbxpr3aybqb1vd12pymnmf9vwqhy302-proot-termux-static-aarch64-unknown-linux-android-0-unstable-2026-02-21";
+            x86_64-linux = "/nix/store/zfk8ysmdvz711vccb4q5xqs3q644xys3-proot-termux-static-x86_64-unknown-linux-android-0-unstable-2026-02-21";
           };
         in
         "${crossCompiledPaths.${targetSystem}}";
