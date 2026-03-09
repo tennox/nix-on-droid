@@ -3,7 +3,7 @@
 { stdenv, fetchFromGitHub, cmake }:
 
 let
-  appPath = "/data/data/com.termux.nix/files/apps/com.termux.nix";
+  appPath = "/data/data/com.termux/files/apps/com.termux";
   socketPath = "${appPath}/termux-am/am.sock";
 in
 stdenv.mkDerivation rec {
