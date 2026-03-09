@@ -90,7 +90,7 @@ in
     };
 
     user = {
-      home = "/data/data/com.termux.nix/files/home";
+      home = "/data/data/com.termux/files/home";
     };
 
   };
