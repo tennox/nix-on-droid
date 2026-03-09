@@ -1,5 +1,7 @@
 # Nix-on-Droid
 
+> **This fork:** Maintains the **`com.termux`** package identifier (instead of `com.termux.nix`) for compatibility with third-party Android automation tools that send intents to the original Termux package name. The official Termux app cannot coexist on the same device. See "[About This Fork](#about-this-fork)" below for details.
+
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
     alt="Get it on F-Droid"
     height="80">](https://f-droid.org/packages/com.termux.nix)
@@ -31,6 +33,17 @@ and nobody has reported whether it actually worked or not,
 so it's no longer built unless a user shows up.
 Sorry, it would not work on 32-bit ARM devices
 and it's not an easy feat to pull off.
+
+
+## About This Fork
+
+This is a fork of [nix-on-droid](https://github.com/nix-community/nix-on-droid) that maintains the **`com.termux`** package identifier instead of `com.termux.nix`.
+
+**Why:** Third-party Android automation tools (like Tasker and Automate) send intents explicitly to the `com.termux` package name. This fork keeps that package identifier for compatibility.
+
+**Trade-off:** The official Termux app cannot be installed on the same device (they both use `com.termux`). Uses a custom `sharedUserId` for signing, so official Termux plugins won't work without recompilation.
+
+**When to use this fork:** You need automation compatibility with tools that expect the `com.termux` package. For standard Termux plugin support, use the [upstream nix-on-droid](https://github.com/nix-community/nix-on-droid).
 
 
 ## Try it out
